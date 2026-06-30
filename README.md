@@ -1,120 +1,100 @@
 <div align="center">
+  <img src="assets/hero_banner.jpg" alt="KeyStream Hero" width="100%" style="border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);" />
 
-# 🎹 KeyStream (Mania Game)
+  <br><br>
 
-**A High-Performance Web-Based Rhythm Game**
+  <img src="https://readme-typing-svg.demolab.com?font=Plus+Jakarta+Sans&weight=800&size=34&pause=2000&color=6366f1&center=true&vCenter=true&width=800&lines=The+World-Class+Web+Rhythm+Experience;Zero+Latency.+Zero+GC+Stutters.;Play+osu!mania+Directly+in+Browser" alt="Typing SVG" />
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+  <p align="center" style="font-size: 16px; color: #888;">
+    Engineered for absolute precision. Designed with minimalist aesthetics.
+  </p>
 
-KeyStream is an ultra-smooth HTML5 Canvas rhythm game that natively supports parsing and playing `osu!mania` beatmaps directly in your browser. Engineered with zero-GC loop optimizations and a sleek *Midnight Tech* UI.
+  <br>
 
-[Play Now](#) • [Report Bug](#) • [Request Feature](#)
+  <a href="#-why-keystream">Philosophy</a> &nbsp;•&nbsp;
+  <a href="#-core-features">Features</a> &nbsp;•&nbsp;
+  <a href="#-setup--deployment">Deployment</a>
 
+  <br><br>
+
+  <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,firebase,git&theme=dark" />
 </div>
 
----
-
-## ✨ Features
-
-- 🎵 **Native `.osz` Support**: Drag & drop any `osu!mania` beatmap file (`.osz`) to play instantly directly in the browser!
-- ⚡ **Ultra-Optimized Engine**: Custom canvas rendering engine running at a flawless 60-144 FPS with `O(1)` particle management and zero Garbage Collection stutters.
-- 🎨 **Midnight Tech UI**: Modern, distraction-free aesthetic with highly readable typography (`Plus Jakarta Sans` & `Inter`) and subtle soft-glow effects.
-- 🎹 **Dynamic Key Modes**: Automatically detects and supports 4K, 5K, 6K, 7K, 8K, 9K, and 10K maps.
-- 👗 **Custom Note Skins**: Swap between various skins (Classic, Cyberpunk, Ocean, Forest, Sunset) on the fly.
-- 🏆 **Global Leaderboards**: Integrated with Firebase & Google Login to compete against players worldwide.
+<br>
 
 ---
 
-## 🎮 How to Play
+## ✦ Why KeyStream?
 
-1. Drag and drop any `.osz` file onto the game screen, or click the **(+)** button in the bottom right.
-2. Select a song and choose your difficulty.
-3. Hit the notes as they reach the judgment line using your keyboard!
-4. Default keys for 4K are `D`, `F`, `J`, `K` (Can be customized via code).
+Most web-based rhythm games suffer from a fatal flaw: **Garbage Collection (GC) Stutters**. When you're playing a high-density 4K map, a single dropped frame ruins a perfect combo. 
+
+KeyStream was born to solve this. Utilizing a custom **Zero-GC Canvas Engine**, the game pre-allocates memory, uses `O(1)` swap-and-pop particle algorithms, and runs purely in Vanilla JS without heavy frameworks blocking the main thread. The result? A locked **144+ FPS** experience.
 
 ---
 
-## 🚀 Installation & Setup
+## ✦ Core Features
 
-Want to run your own server or contribute? Follow these steps to set up the local environment.
+<table align="center" width="100%" style="border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td width="50%" valign="top" style="border: none; padding: 20px;">
+      <h3>🎵 Native <code>.osz</code> Parsing</h3>
+      <p style="color:#a1a1aa; font-size:14px;">Your library is ready. Drag and drop any <i>osu!mania</i> beatmap archive directly into the browser. The engine extracts, parses, and plays instantly. No server conversion required.</p>
+    </td>
+    <td width="50%" valign="top" style="border: none; padding: 20px;">
+      <h3>⚡ Flawless Performance</h3>
+      <p style="color:#a1a1aa; font-size:14px;">Experience ultra-low latency inputs and butter-smooth scrolling. Pre-bound rendering closures ensure the engine never stops to clean up memory mid-song.</p>
+    </td>
+  </tr>
+  <tr style="border: none;">
+    <td width="50%" valign="top" style="border: none; padding: 20px;">
+      <h3>🌍 Global Leaderboards</h3>
+      <p style="color:#a1a1aa; font-size:14px;">Powered by Firebase. Login securely with Google, submit your scores, rank up your profile, and compete for the #1 spot on the worldwide ranking matrix.</p>
+    </td>
+    <td width="50%" valign="top" style="border: none; padding: 20px;">
+      <h3>🎨 Midnight Tech UX</h3>
+      <p style="color:#a1a1aa; font-size:14px;">A beautifully crafted dark-mode interface designed using world-class <b>UX/UI Master</b> guidelines. Deep ocean blacks, electric indigo accents, and ultimate clarity.</p>
+    </td>
+  </tr>
+</table>
 
-### 1. Prerequisites
-- [Node.js](https://nodejs.org/) (v16+)
-- A [Firebase](https://firebase.google.com/) Project (For Authentication & Leaderboards)
+---
 
-### 2. Local Server Setup
-Because the game uses modules and fetches files locally, you cannot just open `index.html`. You need to run the bundled server:
+## ✦ Setup & Deployment
+
+<details>
+<summary><b>🕹️ 1. Boot the Game Server</b></summary>
+<br>
+
+To unleash the full potential of KeyStream locally (required for local beatmap parsing via ES6 modules):
 
 ```bash
 # Clone the repository
 git clone https://github.com/masuzu2/mania_game.git
 cd mania_game
 
-# Run the local server
+# Boot the high-performance local server
 node server.js
 ```
-Open **[http://localhost:8000](http://localhost:8000)** in your browser.
+Open **`http://localhost:8000`** in your browser.
 
----
+</details>
 
-## 🔐 Firebase Configuration
+<details>
+<summary><b>🔐 2. Enable Global Leaderboards (Firebase)</b></summary>
+<br>
 
-To enable **Google Login** and **Global Scores**, you must link your Firebase project:
+To enable the competitive leaderboard matrix:
+1. Inject your web client configuration into `js/auth.js` (`FIREBASE_CONFIG`).
+2. Generate a **Service Account Key** from your Firebase Console.
+3. Save it as `serviceAccountKey.json` in the root directory. *(Secured by `.gitignore`)*.
 
-### Step 1: Firebase Console
-1. Go to [Firebase Console](https://console.firebase.google.com) and create a new project.
-2. Navigate to **Build → Authentication** and enable **Google Sign-In**.
-3. Go to **Project Settings** ⚙️ → **General** → Register a Web App `</>`.
-4. Copy the generated `firebaseConfig` block.
-
-### Step 2: Client Setup
-Open `js/auth.js` and paste your config:
-```javascript
-const FIREBASE_CONFIG = {
-  apiKey: "AIzaSy...",
-  authDomain: "your-project.firebaseapp.com",
-  projectId: "your-project",
-  // ...
-};
-```
-
-### Step 3: Admin Setup (Critical for Security)
-To verify scores and prevent cheating, the Node.js server needs Firebase Admin privileges:
-1. In Firebase Console, go to **Project Settings → Service accounts**.
-2. Click **Generate new private key** and download the `.json` file.
-3. Rename it to `serviceAccountKey.json` and place it in the root folder.
-> ⚠️ **WARNING:** Never commit `serviceAccountKey.json` to GitHub! It is ignored in `.gitignore` by default.
-
----
-
-## 📁 Project Structure
-
-```text
-mania_game/
-├── server.js               # Node.js Backend & API
-├── index.html              # Main Entry Point
-├── css/style.css           # Styling (Midnight Tech UI)
-├── js/
-│   ├── app.js              # State Management
-│   ├── game.js             # Core Engine & Canvas Rendering
-│   ├── auth.js             # Firebase Integration
-│   ├── osuParser.js        # .osu File Decoder
-│   ├── oszLoader.js        # .osz ZIP Extractor
-│   └── ...                 # Additional utilities
-└── songs/                  # Default song packs
-```
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/masuzu2/mania_game/issues).
+</details>
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ by a passionate Rhythm Gamer & Web Developer.</sub>
+  <br>
+  <h3>❝ Design is not just what it looks like. Design is how it works. ❞</h3>
+  <p style="color: #666; font-size: 13px;">Built with absolute passion for the rhythm game community.</p>
+  <br>
 </div>
